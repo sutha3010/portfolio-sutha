@@ -120,5 +120,16 @@
         $('html, body').animate({ scrollTop: 0 }, 600); // 600ms duration for the scroll
     });
 
+   // Disable right-click only on the protected image
+document.getElementById('protect-img').addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+
+    // Disable dragging images
+    $('img').on('dragstart', function(event) {
+        event.preventDefault();
+    });
+
 })(jQuery);
 
